@@ -29,4 +29,4 @@ is
      ,"-gnatyx"    -- check extra parentheses around conditionals
    );
 
-end Swtyle
+end Style
