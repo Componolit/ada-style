@@ -1,0 +1,12 @@
+name: Check
+
+on: push
+
+jobs:
+    gprbuild:
+        name: gprbuild
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v1
+            - name: gprbuild
+              run: docker run -v $PWD:/app componolit/ci:gnat-community-2019 /bin/sh -c "gprbuild -P /app/style.gpr"
