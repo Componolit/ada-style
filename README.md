@@ -11,6 +11,12 @@ Variable_Name : Integer;
 Variable_With_TLA : Integer;
 ```
 
+## Aspects and Pragmas
+
+Whereever possible aspects should be used. Pragmas should only be used if
+there is no equal aspect or if using the aspect would cause a bug in the
+compiler.
+
 ## Package
 
 ### Specification
@@ -23,7 +29,8 @@ end Foo;
 
 ```Ada
 package Foo with
-  SPARK_Mode
+  SPARK_Mode,
+  Pure
 is
    <declarations>
 end Foo;
@@ -33,7 +40,8 @@ end Foo;
 
 ```Ada
 package body Foo with
-  SPARK_Mode
+  SPARK_Mode,
+  Pure
 is
    <declarations>
 begin
