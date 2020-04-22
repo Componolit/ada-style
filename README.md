@@ -208,6 +208,50 @@ If at least one `<expression>` does not fit onto the line, *all* lines are wrapp
     <expression>)
 ```
 
+## Loops
+
+Conditions in loops are formatted equally to conditions in if expressions.
+
+### While loops
+
+```Ada
+while <condition> loop
+   <statements>
+end loop;
+
+while
+   <condition>
+   and then <condition>
+loop
+   <statements>
+end loop;
+```
+
+### For loops
+
+```Ada
+for <index> in <range> loop
+   <statements>
+end loop;
+
+for <element> of <array> loop
+   <statements>
+end loop;
+```
+
+### Exit conditions
+
+```Ada
+loop
+   <statements>
+   exit when <condition>;
+   <statements>
+   exit when <condition>
+             and then <condition>;
+   <statements>
+end loop;
+```
+
 ## Declarations
 
 ```Ada
