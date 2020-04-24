@@ -13,9 +13,9 @@ Variable_With_TLA : Integer;
 
 ## Aspects and Pragmas
 
-Whereever possible aspects should be used. Pragmas should only be used if
+Wherever possible aspects should be used. Pragmas should only be used if
 there is no equal aspect or if using the aspect would cause a bug in the
-compiler.
+toolchain.
 
 ## Package
 
@@ -226,10 +226,16 @@ Conditions in loops are formatted equally to conditions in if expressions.
 while <condition> loop
    <statements>
 end loop;
+```
 
+With multi line conditions:
+
+```Ada
 while
-   <condition>
-   and then <condition>
+   (((<condition>
+     and then <condition>)
+    or else <condition>)
+   and then <condition>)
 loop
    <statements>
 end loop;
@@ -247,6 +253,24 @@ for <element> of <array> loop
 end loop;
 ```
 
+For long ranges and arrays that do not fit on a line:
+
+```Ada
+for <index> in
+   First
+   .. Last
+loop
+   <statements>
+end loop;
+
+for <element> of
+   Array (First
+          .. Last)
+loop
+   <statements>
+end loop;
+```
+
 ### Exit conditions
 
 ```Ada
@@ -254,8 +278,10 @@ loop
    <statements>
    exit when <condition>;
    <statements>
-   exit when <condition>
-             and then <condition>;
+   exit when (((<condition>
+               and then <condition>)
+              or else <condition>)
+             and then <condition>);
    <statements>
 end loop;
 ```
