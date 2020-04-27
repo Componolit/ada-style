@@ -15,7 +15,8 @@ Variable_With_TLA : Integer;
 
 Wherever possible aspects should be used. Pragmas should only be used if
 there is no equal aspect or if using the aspect would cause a bug in the
-toolchain.
+toolchain. If a pragma is used that could have been an aspect a comment
+with a justification and a reference to an issue is required.
 
 ## Package
 
