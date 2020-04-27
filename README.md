@@ -20,11 +20,19 @@ with a justification and a reference to an issue is required.
 
 ## Package
 
+In the declarative part of both package specifications and bodies all
+declarations of types, subprograms, etc. are separated by a single blank line.
+This includes a single blank line at the beginning and the end of the package.
+The package initialization part after `begin` in both, specification and body,
+should not contain any blank lines.
+
 ### Specification
 
 ```Ada
 package Foo is
+
    <declarations>
+
 end Foo;
 ```
 
@@ -33,7 +41,9 @@ package Foo with
   SPARK_Mode,
   Pure
 is
+
    <declarations>
+
 end Foo;
 ```
 
@@ -44,7 +54,9 @@ package body Foo with
   SPARK_Mode,
   Pure
 is
+
    <declarations>
+
 begin
    <statements>
 end Foo;
@@ -52,7 +64,9 @@ end Foo;
 
 ```Ada
 package body Foo is
+
    <declarations>
+
 begin
    <statements>
 end Foo;
@@ -95,6 +109,8 @@ function "+" (Left : Integer; Right : Boolean) return Integer with
 ```
 
 ### Body
+
+Subprogram bodies should not contain blank lines at all.
 
 #### Procedure
 
