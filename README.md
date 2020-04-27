@@ -257,15 +257,27 @@ For long ranges and arrays that do not fit on a line:
 
 ```Ada
 for <index> in
-   First
-   .. Last
+   First .. Last
+loop
+   <statements>
+end loop;
+
+for <index> in
+   Long_First
+   .. Long_Last
 loop
    <statements>
 end loop;
 
 for <element> of
-   Array (First
-          .. Last)
+   Array (First .. Last)
+loop
+   <statements>
+end loop;
+
+for <element> of
+   Array (Long_First
+          .. Long_Last)
 loop
    <statements>
 end loop;
