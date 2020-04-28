@@ -23,8 +23,8 @@ with a justification and a reference to an issue is required.
 In the declarative part of both package specifications and bodies all
 declarations of types, subprograms, etc. are separated by a single blank line.
 This includes a single blank line at the beginning and the end of the package.
-The package initialization part after `begin` in both, specification and body,
-should not contain any blank lines.
+The package initialization part after `begin` in the body should not contain
+any blank lines.
 
 ### Specification
 
