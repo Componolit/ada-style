@@ -31,7 +31,9 @@ should not contain any blank lines.
 ```Ada
 package Foo is
 
-   <declarations>
+   <declaration>
+
+   <declaration>
 
 end Foo;
 ```
@@ -42,7 +44,9 @@ package Foo with
   Pure
 is
 
-   <declarations>
+   <declaration>
+
+   <declaration>
 
 end Foo;
 ```
@@ -55,7 +59,9 @@ package body Foo with
   Pure
 is
 
-   <declarations>
+   <declaration>
+
+   <declaration>
 
 begin
    <statements>
@@ -65,7 +71,9 @@ end Foo;
 ```Ada
 package body Foo is
 
-   <declarations>
+   <declaration>
+
+   <declaration>
 
 begin
    <statements>
