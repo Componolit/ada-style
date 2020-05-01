@@ -183,9 +183,11 @@ function Bar (N : Natural) return Natural is
        Convention => C;
 ```
 
-## If-Conditions
+## Conditionals
 
-### With one-line condition
+### If-statements
+
+With one-line condition:
 
 ```Ada
 if <condition> then
@@ -193,7 +195,7 @@ if <condition> then
 end if;
 ```
 
-### With multi-line condition
+With multi-line condition:
 
 ```Ada
 if
@@ -220,22 +222,46 @@ If `<condition>` or one of the `<expression>`s do not fit onto one line:
  else <expression>)
 ```
 
+### Case-statements
+
+```Ada
+case <selector>
+   when <first_alternative>  => <statement>;
+   when <second_alternative> => <statement>;
+   when others               => <statement>;
+end case;
+```
+
+If at least one `<statement>` does not fit onto the line or at least one alternative has multiple statements, *all* lines are wrapped and arrows are *not* aligned:
+
+```Ada
+case <selector>
+   when <first_alternative> =>
+      <statement>;
+      <statement>;
+   when <second_alternative> =>
+      <statement>;
+   when others =>
+      <statement>;
+      <statement>;
+end case;
+```
 ### Case-expressions
 
 ```Ada
 (case <selector>
- when <alternative> => <expression>,
- when <alternative> => <expression>,
- when others        => <expression>)
+ when <first_alternative>  => <expression>,
+ when <second_alternative> => <expression>,
+ when others               => <expression>)
 ```
 
 If at least one `<expression>` does not fit onto the line, *all* lines are wrapped and arrows are *not* aligned:
 
 ```Ada
 (case <selector>
- when <alternative> =>
+ when <first_alternative> =>
     <expression>,
- when <alternative> =>
+ when <second_alternative> =>
     <expression>,
  when others =>
     <expression>)
