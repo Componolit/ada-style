@@ -200,9 +200,9 @@ With multi-line condition:
 ```Ada
 if
    (((<condition>
-     and then <condition>)
-    or else <condition>)
-   and then <condition>)
+      and then <condition>)
+     or else <condition>)
+    and then <condition>)
 then
    <statements>
 end if;
@@ -284,9 +284,9 @@ With multi line conditions:
 ```Ada
 while
    (((<condition>
-     and then <condition>)
-    or else <condition>)
-   and then <condition>)
+      and then <condition>)
+     or else <condition>)
+    and then <condition>)
 loop
    <statements>
 end loop;
@@ -342,9 +342,9 @@ loop
    exit when <condition>;
    <statements>
    exit when (((<condition>
-               and then <condition>)
-              or else <condition>)
-             and then <condition>);
+                and then <condition>)
+               or else <condition>)
+              and then <condition>);
    <statements>
 end loop;
 ```
