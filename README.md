@@ -250,21 +250,21 @@ end case;
 
 ```Ada
 (case <selector>
- when <first_alternative>  => <expression>,
- when <second_alternative> => <expression>,
- when others               => <expression>)
+    when <first_alternative>  => <expression>,
+    when <second_alternative> => <expression>,
+    when others               => <expression>)
 ```
 
 If at least one `<expression>` does not fit onto the line, *all* lines are wrapped and arrows are *not* aligned:
 
 ```Ada
 (case <selector>
- when <first_alternative> =>
-    <expression>,
- when <second_alternative> =>
-    <expression>,
- when others =>
-    <expression>)
+    when <first_alternative> =>
+       <expression>,
+    when <second_alternative> =>
+       <expression>,
+    when others =>
+       <expression>)
 ```
 
 ## Loops
