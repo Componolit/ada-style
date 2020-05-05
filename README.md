@@ -187,15 +187,17 @@ function Bar (N : Natural) return Natural is
 
 ### If-statements
 
-With one-line condition:
-
 ```Ada
 if <condition> then
+   <statements>
+elsif <condition> then
+   <statements>
+else
    <statements>
 end if;
 ```
 
-With multi-line condition:
+If any of the `<condition>`s does not fit onto one line:
 
 ```Ada
 if
@@ -205,21 +207,37 @@ if
     and then <condition>)
 then
    <statements>
+elsif
+   <condition>
+then
+   <statements>
+else
+   <statements>
 end if;
 ```
 
 ### If-expressions
 
 ```Ada
-(if <condition> then <expression> else <expression>)
+(if <condition> then <expression> elsif <condition> then <expression> else <expression>)
 ```
 
-If `<condition>` or one of the `<expression>`s do not fit onto one line:
+If the whole expression does not fit onto one line:
 
 ```Ada
-(if <condition>
- then <expression>
- else <expression>)
+(if
+    (((<condition>
+       and then <condition>)
+      or else <condition>)
+     and then <condition>)
+ then
+    <expression>
+ elsif
+    <condition>
+ then
+    <expression>
+ else
+    <expression>)
 ```
 
 ### Case-statements
