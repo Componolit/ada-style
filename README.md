@@ -175,12 +175,10 @@ function Bar (N : Natural) return Natural is
 ## Types
 
 ```Ada
-   type Foo_Record is
-      record
-         Bar : Natural;
-      end record
-     with
-       Convention => C;
+   type Foo_Record is record
+      Bar : Natural;
+   end record with
+      Convention => C;
 ```
 
 ## Conditionals
