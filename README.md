@@ -181,6 +181,14 @@ function Bar (N : Natural) return Natural is
       Convention => C;
 ```
 
+```Ada
+type Enum is
+   (Very_Very_Very_Very_Long_Literal_1 => 1,
+    Very_Very_Very_Very_Long_Literal_2 => 2,
+    Very_Very_Very_Very_Long_Literal_3 => 3)
+with Aspect => Condition;
+```
+
 ## Conditionals
 
 ### If-statements
