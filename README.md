@@ -174,6 +174,8 @@ function Bar (N : Natural) return Natural is
 
 ## Types
 
+### Records
+
 ```Ada
    type Foo_Record is record
       Bar : Natural;
@@ -181,11 +183,21 @@ function Bar (N : Natural) return Natural is
       Convention => C;
 ```
 
+### Enumerations
+
 ```Ada
-type Enum is
-   (Very_Very_Very_Very_Long_Literal_1 => 1,
-    Very_Very_Very_Very_Long_Literal_2 => 2,
-    Very_Very_Very_Very_Long_Literal_3 => 3)
+type Enum is (A, B, C);
+```
+
+```Ada
+type Enum_Short is (A, B, C) with Aspect => Condition;
+```
+
+```Ada
+type Enum_Long is
+   (Very_Very_Very_Very_Long_Literal_1,
+    Very_Very_Very_Very_Long_Literal_2,
+    Very_Very_Very_Very_Long_Literal_3)
 with Aspect => Condition;
 ```
 
