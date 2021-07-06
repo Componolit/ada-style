@@ -89,8 +89,8 @@ end Foo;
 ```Ada
 procedure Foo (A : Natural;
                B : Natural) with
-  Pre  => True,
-  Post => True;
+   Pre  => True,
+   Post => True;
 ```
 
 #### Function
@@ -98,8 +98,8 @@ procedure Foo (A : Natural;
 ```Ada
 function Bar (A : Natural;
               B : Natural) return Natural with
-  Pre  => True,
-  Post => True;
+   Pre  => True,
+   Post => True;
 ```
 
 #### Operator
@@ -133,8 +133,8 @@ end Foo;
 ```Ada
 procedure Foo (A : Natural;
                B : Natural) with
-  Pre  => True,
-  Post => True
+   Pre  => True,
+   Post => True
 is
    <declarations>
 begin
@@ -156,8 +156,8 @@ end Bar;
 ```Ada
 function Bar (A : Natural;
               B : Natural) return Natural with
-  Pre  => True,
-  Post => True
+   Pre  => True,
+   Post => True
 is
    <declarations>
 begin
