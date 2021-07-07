@@ -261,7 +261,7 @@ If the whole expression does not fit onto one line:
 ### Case-statements
 
 ```Ada
-case <selector>
+case <selector> is
    when <first_alternative>  => <statement>;
    when <second_alternative> => <statement>;
    when others               => <statement>;
@@ -271,7 +271,7 @@ end case;
 If at least one `<statement>` does not fit onto the line or at least one alternative has multiple statements, *all* lines are wrapped and arrows are *not* aligned:
 
 ```Ada
-case <selector>
+case <selector> is
    when <first_alternative> =>
       <statement>;
       <statement>;
@@ -285,7 +285,7 @@ end case;
 ### Case-expressions
 
 ```Ada
-(case <selector>
+(case <selector> is
     when <first_alternative>  => <expression>,
     when <second_alternative> => <expression>,
     when others               => <expression>)
@@ -294,7 +294,7 @@ end case;
 If at least one `<expression>` does not fit onto the line, *all* lines are wrapped and arrows are *not* aligned:
 
 ```Ada
-(case <selector>
+(case <selector> is
     when <first_alternative> =>
        <expression>,
     when <second_alternative> =>
